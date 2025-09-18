@@ -7,7 +7,6 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 2rem;
             max-width: 900px;
             color: #222;
@@ -15,18 +14,23 @@
         h1, h2 {
             color: #2c3e50;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1em 0;
+            border: 1px solid #ddd;
+            background: #fafafa;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 2rem;
         }
-        table, th, td {
-            border: 1px solid #aaa;
-        }
         th, td {
             padding: 0.75rem;
             text-align: left;
+            border: 1px solid #aaa;
         }
         th {
             background-color: #f4f6f7;
@@ -35,42 +39,56 @@
             color: #2980b9;
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
     <h1>Machine Learning Model Training: A Detailed Guide</h1>
-
-    <p>Efficient training of machine learning models requires a systematic approach prioritizing data quality, clear workflow, and ongoing evaluation. This guide outlines core steps to successfully train and deploy models, supported by current expert sources.</p>
-
+    <p>
+        Efficient training of machine learning models requires a systematic approach prioritizing data quality, clear workflow, and ongoing evaluation. This guide outlines the core steps to successfully train and deploy models, with visual aids to enhance understanding.
+    </p>
+    <img src="https://365datascience.com/resources-center/infographics/world-of-supervised-machine-learning/world-of-supervised-machine-learning-infographic.png" alt="Supervised Machine Learning Infographic" />
+    <p><small>Source: 365 Data Science [web:44]</small></p>
     <h2>Step-by-Step Process</h2>
-
+    <img src="https://data-flair.training/blogs/wp-content/uploads/sites/2/2018/08/Machine-Learning-Infographic.png" alt="Machine Learning Workflow" />
+    <p><small>Source: Data-Flair [web:48]</small></p>
     <h3>1. Define the Problem and Select an Algorithm</h3>
-    <p>Determine if the task is classification, regression, clustering, or another type. Choose an appropriate algorithm (e.g., decision tree, neural network) based on your data and objectives.<sup><a href="#ref-web10">[10]</a></sup></p>
-
+    <p>
+        Determine the task type (classification, regression, clustering, etc.) and choose a fitting algorithm (decision tree, neural network) based on your data and goals.<sup><a href="#ref-web10">[10]</a></sup>
+    </p>
     <h3>2. Prepare and Preprocess Data</h3>
-    <p>Clean data by handling missing values, correcting errors, and normalizing features for consistency. Encode categorical variables with suitable methods like one-hot or label encoding. Engineer features to maximize predictive potential through scaling, dimensionality reduction, or embedding.<sup><a href="#ref-web11">[11]</a>, <a href="#ref-web10">[10]</a></sup></p>
-
+    <img src="https://algomodels.com/wp-content/uploads/2023/11/ai-process-infographic.jpg" alt="Feature Engineering in Machine Learning" />
+    <p><small>Source: Algorithmic Models [web:47]</small></p>
+    <p>
+        Clean data by handling missing values and normalizing features. Encode categorical variables appropriately. Engineer features via scaling, dimensionality reduction, or embedding.<sup><a href="#ref-web11">[11]</a>, <a href="#ref-web10">[10]</a></sup>
+    </p>
     <h3>3. Split Your Dataset</h3>
-    <p>Divide data into training, validation, and test sets (e.g., 70/15/15 split). Use cross-validation (k-fold, stratified) for robust performance assessment and prevention of data leakage.<sup><a href="#ref-web10">[10]</a>, <a href="#ref-web12">[12]</a></sup></p>
-
+    <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*NA46Kwh1dloeQIE0EWI-tw.png" alt="Train/Validation/Test Split Illustration" />
+    <p><small>Source: Medium [web:47], Example</small></p>
+    <p>
+        Divide data into training, validation, and test sets (e.g., 70/15/15 split). Use k-fold cross-validation for robust assessment.<sup><a href="#ref-web10">[10]</a>, <a href="#ref-web12">[12]</a></sup>
+    </p>
     <h3>4. Train the Model</h3>
-    <p>Use batch, stochastic, or mini-batch optimization depending on dataset size and resources. Adjust model parameters using algorithms like gradient descent to minimize loss.<sup><a href="#ref-web13">[13]</a>, <a href="#ref-web10">[10]</a></sup></p>
-
+    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*pWI6IYz2IbkWAUFVE4EJNA.png" alt="Training Loss Function Visualization" />
+    <p><small>Source: Medium [web:47], Example</small></p>
+    <p>
+        Use batch, stochastic, or mini-batch optimization. Adjust model parameters using algorithms like gradient descent to minimize loss.<sup><a href="#ref-web13">[13]</a>, <a href="#ref-web10">[10]</a></sup>
+    </p>
     <h3>5. Tune Hyperparameters</h3>
-    <p>Iteratively refine learning settings not directly learned from data such as learning rate or network depth. Use validation data to guide hyperparameter selection to improve generalization.<sup><a href="#ref-web12">[12]</a>, <a href="#ref-web10">[10]</a></sup></p>
-
+    <p>
+        Refine learning settings not learned from data directly, such as learning rate or layers. Use validation data to guide choices.<sup><a href="#ref-web12">[12]</a>, <a href="#ref-web10">[10]</a></sup>
+    </p>
     <h3>6. Evaluate Performance</h3>
-    <p>Assess metrics appropriate to the task—accuracy, precision, recall, F1-score for classification or RMSE for regression. Evaluate on held-out test sets and with cross-validation to ensure reliability.<sup><a href="#ref-web12">[12]</a>, <a href="#ref-web13">[13]</a></sup></p>
-
+    <img src="https://365datascience.com/resources-center/infographics/world-of-supervised-machine-learning/metrics-infographic.png" alt="Model Evaluation Metrics Infographic" />
+    <p><small>Source: 365 Data Science [web:44]</small></p>
+    <p>
+        Assess metrics such as accuracy, precision, recall, and F1-score for classification. Test on reserved data and cross-validate.<sup><a href="#ref-web12">[12]</a>, <a href="#ref-web13">[13]</a></sup>
+    </p>
     <h3>7. Deploy and Monitor</h3>
-    <p>Integrate the model into production pipelines for real-time predictions. Continuously monitor performance and retrain as new data or changing conditions require.<sup><a href="#ref-web13">[13]</a></sup></p>
-
-    <h2>Efficiency and Common Challenges</h2>
-    <p>Eliminate noisy and irrelevant features to improve training speed and model accuracy. Prevent overfitting using regularization and careful model complexity. Maintain reproducibility by documenting data, code versions, and experimental settings.<sup><a href="#ref-web11">[11]</a>, <a href="#ref-web10">[10]</a></sup></p>
-
+    <img src="https://algomodels.com/wp-content/uploads/2023/11/model-deployment-ml.png" alt="ML Model Deployment Workflow" />
+    <p><small>Source: Algorithmic Models [web:47]</small></p>
+    <p>
+        Integrate the model for real-time predictions and monitor/retrain as needed.<sup><a href="#ref-web13">[13]</a></sup>
+    </p>
     <h2>Summary Table</h2>
     <table>
         <thead>
@@ -123,7 +141,6 @@
             </tr>
         </tbody>
     </table>
-
     <footer>
         <h2>References</h2>
         <ol>
@@ -131,6 +148,9 @@
             <li id="ref-web11"><a href="https://botpenguin.com/blogs/understanding-model-training" target="_blank" rel="noopener noreferrer">Understanding Model Training: A Comprehensive Guide - BotPenguin (2024)</a></li>
             <li id="ref-web12"><a href="https://www.aitude.com/machine-learning-model-training-the-complete-beginners-guide/" target="_blank" rel="noopener noreferrer">Machine Learning Model Training: The Complete Beginner's Guide - Aitude (2025)</a></li>
             <li id="ref-web13"><a href="https://www.elastic.co/what-is/machine-learning" target="_blank" rel="noopener noreferrer">What is Machine Learning? | Elastic (2023)</a></li>
+            <li><a href="https://data-flair.training/blogs/machine-learning-infographic/" target="_blank" rel="noopener noreferrer">Machine Learning Infographic - Data-Flair (2024)</a></li>
+            <li><a href="https://365datascience.com/resources-center/infographics/world-of-supervised-machine-learning/" target="_blank" rel="noopener noreferrer">Supervised Machine Learning Infographic - 365 Data Science (2022)</a></li>
+            <li><a href="https://algomodels.com/5-infographics-to-better-understand-artificial-intelligence/" target="_blank" rel="noopener noreferrer">AI Process Infographic, Model Deployment - Algorithmic Models (2023)</a></li>
         </ol>
     </footer>
 </body>
